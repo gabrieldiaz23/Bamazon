@@ -149,7 +149,7 @@ function addProd() {
         type: "input",
         message: "Please enter how many pieces will there be on inventory:"
     }]).then(function (answer) {
-        var query = "INSERT INTO products VALUES (?,?,?,?,?)";
+        var query = "INSERT INTO products VALUES ?";
         connection.query(query, 
             [{ item_id: answer.item }, 
              { product_name: answer.name },
